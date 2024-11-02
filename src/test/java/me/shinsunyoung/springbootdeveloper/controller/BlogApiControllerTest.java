@@ -125,7 +125,6 @@ class BlogApiControllerTest {
         mockMvc.perform(delete(url, savedArticle.getId())).andExpect(status().isOk());
 
         // then
-        List<Article> articles = blogRepository.findAll();
-        assertThat(articles).isEmpty();
+        assertThat(blogRepository.findById(savedArticle.getId())).isEmpty();
     }
 }
