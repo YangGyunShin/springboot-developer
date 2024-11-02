@@ -2,7 +2,7 @@
 .gradle
 build
 .idea
-s
+
 # Compiled class file
 *.class
 
